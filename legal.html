@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agreements &amp; Policies · Ndur Coaching</title>
+  <meta name="description" content="Ndur Coaching's Coaching Services Agreement, Privacy Policy, Liability Waiver, and Cookie Policy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:    #f7f5f0;
+      --warm:     #edeae3;
+      --dark:     #0d1117;
+      --dark-2:   #111820;
+      --blue:     #0a5fd4;
+      --blue-mid: #1a6fe0;
+      --blue-lt:  #d0e4fb;
+      --text:     #1a1814;
+      --text-2:   #5a5650;
+      --text-3:   #9a9690;
+      --border:   #dedad2;
+
+      --font-display: 'DM Serif Display', serif;
+      --font-body:    'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV (matches homepage) ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 64px;
+      background: rgba(247,245,240,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo-img { height: 24px; width: auto; }
+    .nav-logo-text {
+      font-size: 13px; font-weight: 500; letter-spacing: 0.5px;
+      text-transform: uppercase; color: var(--text-2);
+      padding-left: 10px; border-left: 1px solid var(--border);
+    }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 14px; color: var(--text-2); transition: color 0.15s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a.nav-cta {
+      padding: 8px 20px; background: var(--blue); color: #fff;
+      border-radius: 8px; font-size: 14px; font-weight: 500;
+      transition: background 0.15s;
+    }
+    .nav-links a.nav-cta:hover { background: var(--blue-mid); color: #fff; }
+
+    /* ── HEADER ── */
+    .legal-hero {
+      background: var(--dark); color: #fff;
+      padding: 136px 48px 72px; position: relative; overflow: hidden;
+    }
+    .legal-hero::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 70% 80% at 85% 30%, rgba(10,95,212,0.32) 0%, transparent 70%);
+    }
+    .legal-hero-inner { max-width: 1100px; margin: 0 auto; position: relative; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 500; letter-spacing: 1.5px;
+      text-transform: uppercase; color: #5ba4f5; margin-bottom: 18px;
+    }
+    .eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: #5ba4f5; }
+    .legal-hero h1 {
+      font-family: var(--font-display); font-size: clamp(38px, 5vw, 56px);
+      line-height: 1.08; letter-spacing: -1px; margin-bottom: 16px;
+    }
+    .legal-hero h1 em { font-style: italic; color: #5ba4f5; }
+    .legal-hero p { font-size: 16px; color: rgba(255,255,255,0.6); max-width: 560px; line-height: 1.7; }
+
+    /* ── LAYOUT ── */
+    .legal-body { padding: 64px 48px 96px; }
+    .legal-grid {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 240px 1fr; gap: 56px; align-items: start;
+    }
+
+    .toc { position: sticky; top: 96px; }
+    .docs { min-width: 0; }
+    .toc-title {
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;
+      color: var(--text-3); margin-bottom: 12px;
+    }
+    .toc > a {
+      display: flex; gap: 10px; align-items: baseline;
+      font-size: 14px; color: var(--text-2); padding: 9px 0;
+      border-bottom: 1px solid var(--border); transition: color 0.15s;
+    }
+    .toc > a:first-of-type { border-top: 1px solid var(--border); }
+    .toc > a:hover { color: var(--blue); }
+    .toc-num { font-size: 11px; color: var(--blue-mid); font-weight: 500; letter-spacing: 0.5px; }
+    .toc-actions { margin-top: 20px; }
+    .btn-print {
+      display: inline-flex; align-items: center; gap: 8px;
+      font: inherit; font-size: 13px; font-weight: 500; color: var(--blue);
+      background: #fff; border: 1px solid var(--border); border-radius: 8px;
+      padding: 9px 14px; cursor: pointer; transition: border-color 0.15s;
+    }
+    .btn-print:hover { border-color: var(--blue); }
+    .toc-contact { margin-top: 20px; font-size: 13px; color: var(--text-3); line-height: 1.6; }
+    .toc-contact a { color: var(--blue); }
+
+    /* ── DOCUMENTS ── */
+    .doc {
+      background: #fff; border: 1px solid var(--border); border-radius: 16px;
+      padding: 44px 48px; margin-bottom: 32px;
+    }
+    .doc:last-child { margin-bottom: 0; }
+    .doc-badge {
+      display: inline-block; font-size: 11px; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.8px; padding: 4px 10px; border-radius: 999px;
+      background: var(--blue-lt); color: var(--blue); margin-bottom: 16px;
+    }
+    .doc h2 {
+      font-family: var(--font-display); font-size: 32px; letter-spacing: -0.3px;
+      line-height: 1.15; margin-bottom: 8px; color: var(--blue);
+    }
+    .doc-meta {
+      font-size: 13px; color: var(--text-3); margin-bottom: 28px;
+      padding-bottom: 20px; border-bottom: 1px solid var(--border);
+    }
+    .doc h3 { font-size: 16px; font-weight: 500; margin: 28px 0 8px; color: var(--text); }
+    .doc h3:first-of-type { margin-top: 0; }
+    .doc p { font-size: 15px; color: var(--text-2); margin-bottom: 12px; line-height: 1.75; }
+    .doc ul, .doc ol { padding-left: 20px; margin-bottom: 12px; }
+    .doc li { font-size: 15px; color: var(--text-2); margin-bottom: 6px; line-height: 1.7; }
+    .doc a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
+    .doc .highlight {
+      background: #f0f6ff; border-left: 3px solid var(--blue);
+      border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 20px 0;
+    }
+    .doc .highlight p { margin: 0; font-size: 14px; }
+    .doc .warning {
+      background: #fdf3e3; border-left: 3px solid #c8820a;
+      border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 20px 0;
+    }
+    .doc .warning p { margin: 0; font-size: 14px; color: #7a5200; }
+
+    .accept-note {
+      margin-top: 32px; padding: 16px 18px;
+      display: flex; gap: 12px; align-items: flex-start;
+      background: var(--cream); border: 1px solid var(--border); border-radius: 10px;
+      color: var(--blue);
+    }
+    .accept-note svg { flex-shrink: 0; margin-top: 3px; }
+    .accept-note p { margin: 0; font-size: 14px; color: var(--text-2); }
+
+    .cookie-table-wrap { overflow-x: auto; margin: 16px 0 20px; border: 1px solid var(--border); border-radius: 10px; }
+    .cookie-table { width: 100%; border-collapse: collapse; min-width: 520px; }
+    .cookie-table th, .cookie-table td {
+      padding: 12px 14px; text-align: left; vertical-align: top;
+      border-bottom: 1px solid var(--border); font-size: 14px; color: var(--text-2); line-height: 1.6;
+    }
+    .cookie-table th {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase;
+      color: var(--text-3); background: var(--cream);
+    }
+    .cookie-table tr:last-child td { border-bottom: none; }
+    .cookie-table td:first-child { color: var(--text); font-weight: 500; }
+
+    /* ── FOOTER (matches homepage) ── */
+    footer { background: var(--dark-2); padding: 48px; border-top: 1px solid rgba(255,255,255,0.06); }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 10px; }
+    .footer-logo-img { height: 20px; width: auto; }
+    .footer-logo-text {
+      font-size: 13px; font-weight: 500; letter-spacing: 0.5px;
+      text-transform: uppercase; color: rgba(255,255,255,0.5);
+      padding-left: 10px; border-left: 1px solid rgba(255,255,255,0.15);
+    }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { font-size: 13px; color: rgba(255,255,255,0.35); transition: color 0.15s; }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .legal-hero { padding: 108px 24px 56px; }
+      .legal-body { padding: 40px 24px 72px; }
+      .legal-grid { grid-template-columns: 1fr; gap: 32px; }
+      .toc { position: static; }
+      footer { padding: 32px 24px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 600px) {
+      .doc { padding: 28px 20px; }
+      .doc h2 { font-size: 26px; }
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      nav, footer, .toc, .legal-hero::before { display: none; }
+      body { background: #fff; }
+      .legal-hero { background: #fff; color: var(--text); padding: 0 0 24px; }
+      .legal-hero p { color: var(--text-2); }
+      .legal-body { padding: 0; }
+      .legal-grid { display: block; }
+      .doc { border: none; padding: 0; margin-bottom: 0; break-before: page; }
+      .doc:first-child { break-before: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html" aria-label="Ndur Coaching home">
+      <img class="nav-logo-img" src="ndur-mark-dark.png" alt="Ndur" />
+      <span class="nav-logo-text">Coaching</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#philosophy">Philosophy</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#compare">Compare</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#about">About</a>
+      <a href="https://intake.ndur.life" class="nav-cta">Work with me</a>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="legal-hero">
+    <div class="legal-hero-inner">
+      <div class="eyebrow">Legal</div>
+      <h1>Agreements &amp; <em>policies.</em></h1>
+      <p>These documents govern the coaching relationship between Ndur and its athletes, and explain how this website and the client portal handle your information.</p>
+    </div>
+  </header>
+
+  <main class="legal-body">
+    <div class="legal-grid">
+
+      <aside class="toc" aria-label="Contents">
+        <div class="toc-title">Contents</div>
+        <a href="#coaching-agreement"><span class="toc-num">01</span> Coaching Services Agreement</a>
+        <a href="#privacy-policy"><span class="toc-num">02</span> Privacy Policy</a>
+        <a href="#liability-waiver"><span class="toc-num">03</span> Liability Waiver &amp; Release</a>
+        <a href="#cookie-policy"><span class="toc-num">04</span> Cookie Policy</a>
+        <div class="toc-actions">
+          <button class="btn-print" type="button" onclick="window.print()">
+            <svg aria-hidden="true" viewBox="0 0 20 20" width="16" height="16"><path d="M6 7V3h8v4M6 14H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-2M6 11h8v6H6z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            Print / save as PDF
+          </button>
+        </div>
+        <p class="toc-contact">Questions? Email <a href="mailto:nic@ndur.life">nic@ndur.life</a></p>
+      </aside>
+
+      <div class="docs">
+
+  
+        <div class="doc" id="coaching-agreement">
+    <div class="doc-badge">Document 01</div>
+    <h2>Coaching Services Agreement</h2>
+    <div class="doc-meta">Between Ndur ("<strong>Coach</strong>") and the athlete completing this form ("<strong>Athlete</strong>")</div>
+
+    <h3>1. Services</h3>
+    <p>Ndur agrees to provide personalized marathon training coaching services to the Athlete, which may include but are not limited to:</p>
+    <ul>
+      <li>A customized monthly training plan based on the Athlete's current fitness, goals, and race schedule</li>
+      <li>Regular plan updates and adjustments based on Athlete feedback and progress</li>
+      <li>Communication via nic@ndur.life for questions and check-ins</li>
+      <li>Race strategy and pacing guidance</li>
+    </ul>
+    <p>The specific tier of service (plan only, full coaching, or race strategy session) will be agreed upon separately prior to the commencement of services.</p>
+
+    <h3>2. Term & Billing</h3>
+    <p>Services are billed on a monthly basis. The agreement begins on the date the Athlete's intake form is submitted and first payment is received, and continues month-to-month until cancelled by either party.</p>
+    <ul>
+      <li>Payment is due on the 1st of each month</li>
+      <li>Either party may cancel with 14 days written notice</li>
+      <li>No refunds will be issued for partial months already in progress</li>
+      <li>Payments are processed via Stripe</li>
+    </ul>
+
+    <h3>3. Athlete Responsibilities</h3>
+    <p>The Athlete agrees to:</p>
+    <ul>
+      <li>Provide accurate and complete information on the intake form and keep it updated</li>
+      <li>Communicate any injuries, illnesses, or significant life changes that may affect training</li>
+      <li>Obtain medical clearance from a licensed physician before beginning any training program</li>
+      <li>Follow the training plan as prescribed to the best of their ability, and communicate when adjustments are needed</li>
+      <li>Respond to coach communications within 48 hours to maintain an effective coaching relationship</li>
+    </ul>
+
+    <h3>4. Coach Responsibilities</h3>
+    <p>Ndur agrees to:</p>
+    <ul>
+      <li>Provide a training plan within 2 business days of receiving payment</li>
+      <li>Respond to Athlete questions and check-ins within 2 business days</li>
+      <li>Adjust the training plan as needed based on Athlete progress and feedback</li>
+      <li>Keep all Athlete information confidential in accordance with the Privacy Policy</li>
+    </ul>
+
+    <h3>5. Not Medical Advice</h3>
+    <div class="warning">
+      <p>Coaching services provided by Ndur are fitness and performance coaching only and do not constitute medical advice, diagnosis, or treatment. The Athlete should consult a qualified physician before beginning any training program and for any health concerns that arise during training.</p>
+    </div>
+
+    <h3>6. Intellectual Property</h3>
+    <p>All training plans, materials, and content created by Ndur are proprietary and intended for the Athlete's personal use only. Athlete may not share, distribute, resell, or publish coaching materials without written consent from Ndur.</p>
+
+    <h3>7. Governing Law</h3>
+    <p>This agreement shall be governed by the laws of the State of South Dakota. Any disputes shall be resolved through binding arbitration in Sioux Falls, South Dakota.</p>
+
+    <div class="accept-note">
+      <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18"><path d="M5 10.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <p>Accepted electronically when the Athlete checks the agreement box and submits the Ndur intake form. The date of acceptance is recorded with the Athlete's profile.</p>
+    </div>
+  </div>
+
+        <div class="doc" id="privacy-policy">
+    <div class="doc-badge">Document 02</div>
+    <h2>Privacy Policy</h2>
+    <div class="doc-meta">Effective date: 6.12.26 · Ndur is committed to protecting the privacy of its athletes.</div>
+
+    <h3>1. Information We Collect</h3>
+    <p>When you complete the Ndur intake form, we collect the following personal information:</p>
+    <ul>
+      <li>Name, email address, and phone number</li>
+      <li>Age and gender</li>
+      <li>Running experience, current weekly mileage, and training history</li>
+      <li>Goal race and race date</li>
+      <li>Any additional health or fitness information you voluntarily provide</li>
+    </ul>
+
+    <h3>2. How We Use Your Information</h3>
+    <p>Your information is used exclusively to:</p>
+    <ul>
+      <li>Build and personalize your training plan</li>
+      <li>Communicate with you about your training and coaching services</li>
+      <li>Process payments for coaching services</li>
+      <li>Improve our coaching methods over time (in aggregate and anonymized form only)</li>
+    </ul>
+
+    <h3>3. How We Store Your Information</h3>
+    <p>Your personal data is stored securely using Supabase, a GDPR-compliant database platform with industry-standard encryption at rest and in transit. Access to your data is restricted to Ndur coaching staff only.</p>
+    <div class="highlight">
+      <p>We do not sell, rent, trade, or share your personal information with any third party for marketing or commercial purposes, ever.</p>
+    </div>
+
+    <h3>4. Data Retention</h3>
+    <p>We retain your personal information for the duration of your coaching relationship with Ndur, plus 2 years after your last active coaching period. You may request deletion of your data at any time by contacting us at nic@ndur.life.</p>
+
+    <h3>5. Your Rights</h3>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Request a copy of the personal information we hold about you</li>
+      <li>Request correction of inaccurate information</li>
+      <li>Request deletion of your data</li>
+      <li>Withdraw consent for data processing at any time</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at nic@ndur.life.</p>
+
+    <h3>6. Communications</h3>
+    <p>By submitting the intake form, you consent to receiving coaching-related communications from Ndur via email. You may opt out of non-essential communications at any time by replying to any email with "unsubscribe."</p>
+
+    <h3>7. Changes to This Policy</h3>
+    <p>We may update this Privacy Policy from time to time. We will notify active athletes of any material changes by email at least 14 days before they take effect.</p>
+
+    <h3>8. Contact</h3>
+    <p>Questions about this policy can be directed to: Nicholas DeSchepper, Ndur, nic@ndur.life</p>
+  </div>
+
+        <div class="doc" id="liability-waiver">
+    <div class="doc-badge">Document 03</div>
+    <h2>Liability Waiver & Release</h2>
+    <div class="doc-meta">Please read carefully before signing. This is a legally binding document.</div>
+
+    <div class="warning">
+      <p><strong>Important:</strong> By signing this waiver, you are giving up certain legal rights, including the right to sue for injuries or damages. Read fully before agreeing.</p>
+    </div>
+
+    <h3>1. Assumption of Risk</h3>
+    <p>I, the undersigned Athlete, acknowledge and understand that marathon training and distance running involve inherent risks, including but not limited to:</p>
+    <ul>
+      <li>Musculoskeletal injuries including strains, sprains, stress fractures, and overuse injuries</li>
+      <li>Cardiovascular events including abnormal heart rhythms and, in rare cases, cardiac arrest</li>
+      <li>Heat-related illness, dehydration, and hyponatremia</li>
+      <li>Falls, accidents, and injuries caused by road, trail, or weather conditions</li>
+      <li>Psychological stress associated with high-volume training</li>
+    </ul>
+    <p>I voluntarily assume all such risks, whether known or unknown, and accept full responsibility for any injury, illness, or loss that may result from participation in a training program provided by Ndur.</p>
+
+    <h3>2. Medical Clearance</h3>
+    <p>I confirm that I have consulted with, or will consult with, a licensed physician prior to beginning this training program. I represent that I am in suitable physical condition to undertake marathon training and am not aware of any medical condition that would make participation inadvisable. I agree to immediately notify Ndur and seek medical attention if I experience any unusual symptoms during training.</p>
+
+    <h3>3. Release of Liability</h3>
+    <p>In consideration of Ndur providing coaching services to me, I hereby release, waive, discharge, and covenant not to sue Ndur, its owners, coaches, employees, agents, and affiliates (collectively, "Released Parties") from any and all claims, demands, damages, rights of action, or causes of action arising from:</p>
+    <ul>
+      <li>Participation in any training activities prescribed or recommended by Ndur</li>
+      <li>Any injury, illness, death, or property damage resulting from such participation</li>
+      <li>The negligence of the Released Parties, to the fullest extent permitted by law</li>
+    </ul>
+
+    <h3>4. Indemnification</h3>
+    <p>I agree to indemnify and hold harmless the Released Parties from any loss, liability, damage, or cost they may incur arising out of or related to my participation in training activities, including reasonable attorneys' fees.</p>
+
+    <h3>5. Emergency Medical Authorization</h3>
+    <p>In the event of an emergency where I am unable to provide consent, I authorize Ndur to seek emergency medical assistance on my behalf. I agree to be responsible for all costs associated with such medical care.</p>
+
+    <h3>6. Acknowledgment of Independent Judgment</h3>
+    <p>I acknowledge that I am free to modify, reduce, or stop any prescribed training at any time based on my own physical condition and judgment. Ndur's training recommendations are guidance only, and I retain sole responsibility for decisions about my own body and training.</p>
+
+    <h3>7. Severability</h3>
+    <p>If any provision of this waiver is found to be unenforceable, the remaining provisions shall remain in full force and effect.</p>
+
+    <h3>8. Voluntary Agreement</h3>
+    <p>I have read this Liability Waiver and Release in its entirety, I understand its contents, and I sign it voluntarily and of my own free will. I am at least 18 years of age, or if a minor, my parent or legal guardian has signed on my behalf.</p>
+
+    <div class="accept-note">
+      <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18"><path d="M5 10.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <p>Accepted electronically when the Athlete checks the agreement box and submits the Ndur intake form. The date of acceptance is recorded with the Athlete's profile. Athletes under 18 must have a parent or legal guardian complete the intake form and accept this waiver on their behalf.</p>
+    </div>
+  </div>
+
+        <div class="doc" id="cookie-policy">
+    <div class="doc-badge">Document 04</div>
+    <h2>Cookie Policy</h2>
+    <div class="doc-meta">Effective date: 10.2.26 · How ndur.life and the Ndur client portal use cookies and similar technologies.</div>
+
+    <h3>1. The Short Version</h3>
+    <div class="highlight">
+      <p>Ndur does not use advertising cookies, analytics cookies, tracking pixels, or any other technology that follows you across the web. We only store what is strictly necessary for the client portal to work.</p>
+    </div>
+
+    <h3>2. What Cookies and Local Storage Are</h3>
+    <p>Cookies are small text files a website saves in your browser. "Local storage" is a similar browser feature that lets a website remember small pieces of information on your device. This policy covers both.</p>
+
+    <h3>3. This Website (ndur.life)</h3>
+    <p>The public Ndur website does not set any cookies and does not store anything in your browser. When you visit, two outside services receive basic technical information (such as your IP address and browser type) as a normal part of loading the page:</p>
+    <ul>
+      <li><strong>GitHub Pages</strong>, which hosts this website, may keep standard server logs for security and reliability.</li>
+      <li><strong>Google Fonts</strong>, which supplies the typefaces used on this site. Google states that it does not set cookies or use this information to build profiles of visitors.</li>
+    </ul>
+
+    <h3>4. The Client Portal</h3>
+    <p>If you are an Ndur athlete, the client portal uses your browser's local storage only for strictly necessary and preference purposes:</p>
+    <div class="cookie-table-wrap">
+      <table class="cookie-table">
+        <thead>
+          <tr><th>Purpose</th><th>What is stored</th><th>Type</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Keeping you signed in</td><td>A secure login session token issued by Supabase, our database and authentication provider. It is removed when you sign out.</td><td>Strictly necessary</td></tr>
+          <tr><td>Remembering your display choices</td><td>Small settings such as which portal sections you have collapsed and whether you dismissed the "Add to Home Screen" prompt.</td><td>Preference</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>None of this information is used for advertising or shared with third parties for marketing purposes.</p>
+
+    <h3>5. Third-Party Services</h3>
+    <p>When you choose to connect your Strava account or make a payment, you are taken to Strava or Stripe. Those services may set their own cookies on their own websites, which are governed by their respective privacy and cookie policies, not this one.</p>
+
+    <h3>6. Your Choices</h3>
+    <p>Because we only use strictly necessary storage and simple preferences, there is no cookie consent banner on this site. You can clear or block cookies and local storage at any time in your browser settings. Blocking storage for the client portal will prevent you from staying signed in.</p>
+
+    <h3>7. Changes to This Policy</h3>
+    <p>If we ever add analytics or other non-essential cookies, we will update this policy and ask for your consent before setting them. The effective date above shows when this policy was last changed.</p>
+
+    <h3>8. Contact</h3>
+    <p>Questions about this policy can be directed to: Nicholas DeSchepper, Ndur, <a href="mailto:nic@ndur.life">nic@ndur.life</a></p>
+  </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a class="footer-logo" href="index.html" aria-label="Ndur Coaching home">
+        <img class="footer-logo-img" src="ndur-mark-light.png" alt="Ndur" />
+        <span class="footer-logo-text">Coaching</span>
+      </a>
+      <div class="footer-links">
+        <a href="index.html#philosophy">Philosophy</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="legal.html">Agreements &amp; Policies</a>
+        <a href="legal.html#cookie-policy">Cookies</a>
+        <a href="https://intake.ndur.life">Work with me</a>
+      </div>
+      <div class="footer-copy">© 2026 Ndur. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
