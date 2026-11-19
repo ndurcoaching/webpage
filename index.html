@@ -219,13 +219,48 @@
     .philosophy-item h3 { font-size: 17px; font-weight: 500; margin-bottom: 6px; }
     .philosophy-item p { font-size: 14px; color: var(--text-2); line-height: 1.7; }
 
+    /* ── EVERY RUN, REVIEWED ── */
+    .reviewed { background: var(--warm); }
+    .reviewed-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .reviewed-points { list-style: none; margin-top: 32px; display: grid; gap: 20px; }
+    .reviewed-points li { padding-left: 20px; border-left: 2px solid var(--blue-lt); }
+    .reviewed-points h3 { font-size: 16px; font-weight: 500; margin-bottom: 4px; }
+    .reviewed-points p { font-size: 14px; color: var(--text-2); line-height: 1.6; }
+    .reviewed-badge { margin-top: 28px; font-size: 13px; color: var(--text-2); }
+    .reviewed-badge strong { color: var(--text); font-weight: 600; }
+    .week-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 16px;
+      box-shadow: 0 24px 48px rgba(13,17,23,0.08); overflow: hidden;
+    }
+    .week-head {
+      display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+      padding: 18px 22px; border-bottom: 1px solid var(--border); background: var(--cream);
+    }
+    .week-head strong { font-size: 14px; font-weight: 600; }
+    .week-head span { font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-3); }
+    .week-row {
+      display: grid; grid-template-columns: 44px 1fr auto; gap: 12px; align-items: center;
+      padding: 13px 22px; border-bottom: 1px solid var(--border); font-size: 13px;
+    }
+    .week-day { font-weight: 600; color: var(--text-3); font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; }
+    .week-plan { color: var(--text); }
+    .week-plan small { display: block; color: var(--text-3); font-size: 12px; margin-top: 2px; font-variant-numeric: tabular-nums; }
+    .week-status { font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+    .week-status.ok { background: #e3f4e8; color: #1d7a3e; }
+    .week-status.flag { background: #fdecd8; color: #a14d0b; }
+    .week-status.next { background: var(--cream); color: var(--text-3); font-weight: 500; }
+    .week-row.flagged { background: #fffaf3; }
+    .week-note { padding: 16px 22px; font-size: 13px; color: var(--text-2); line-height: 1.6; background: var(--blue-lt); }
+    .week-note strong { color: var(--blue); font-weight: 600; }
+    .week-caption { margin-top: 12px; font-size: 12px; color: var(--text-3); text-align: center; }
+
     /* ── SERVICES ── */
     .services { background: var(--dark-2); }
     .services .section-title { color: #5ba4f5; }
     .services .section-eyebrow { color: #5ba4f5; }
     .services .section-sub { color: rgba(255,255,255,0.5); }
     .services-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+      display: grid; grid-template-columns: 1fr; gap: 1px;
       background: rgba(255,255,255,0.06); border-radius: 16px; overflow: hidden;
       border: 1px solid rgba(255,255,255,0.06); margin-top: 48px;
     }
@@ -252,6 +287,12 @@
       content: ''; position: absolute; left: 2px; top: 6px; width: 10px; height: 6px;
       border-left: 2px solid #5ba4f5; border-bottom: 2px solid #5ba4f5; transform: rotate(-45deg);
     }
+    .service-card.single { padding: 40px; }
+    .service-card.single .service-list { columns: 2; column-gap: 40px; }
+    .service-card.single .service-list li { break-inside: avoid; }
+    .service-card.single .service-price { justify-content: space-between; gap: 20px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); }
+    .service-amount { font-family: var(--font-display); font-size: 40px; color: #fff; line-height: 1; }
+    .service-amount span { font-family: var(--font-body); font-size: 15px; color: rgba(255,255,255,0.5); margin-left: 4px; }
     .service-price { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
     .service-badge {
       display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 0.3px;
@@ -469,6 +510,11 @@
       .faq-item p { padding-right: 0; }
       .philosophy-grid { grid-template-columns: 1fr; gap: 40px; }
       .services-grid { grid-template-columns: 1fr; }
+      .reviewed-grid { grid-template-columns: 1fr; gap: 40px; }
+      .week-head span { display: none; }
+      .week-row { padding: 13px 16px; grid-template-columns: 36px 1fr auto; }
+      .service-card.single { padding: 28px 24px; }
+      .service-card.single .service-list { columns: 1; }
       .process-steps { grid-template-columns: 1fr 1fr; }
       .process-step::after { display: none; }
       .about-inner { grid-template-columns: 1fr; }
@@ -508,7 +554,7 @@
         <div class="hero-eyebrow rise" style="--d:100ms">Running Coaching</div>
         <h1 class="rise" style="--d:250ms">Train with <em>purpose.</em><br>Race with confidence.</h1>
         <p class="hero-sub rise" style="--d:400ms">
-          Don't do it alone. Train smarter and race faster with Ndur Coaching.
+          1:1 coaching from a coach who sees every run. Connect Strava, and Coach Nic reviews your training within 24 hours.
         </p>
         <div class="hero-btns rise" style="--d:550ms">
           <a href="https://cal.com/ndur.life/30min" target="_blank" rel="noopener" class="btn-primary">Book a free consult</a>
@@ -547,7 +593,7 @@
           <div class="section-eyebrow reveal">Philosophy</div>
           <h2 class="section-title reveal">Built around the athlete, not the algorithm.</h2>
           <p class="section-sub">
-            Our technology-driven solution removes the guesswork from coaching, while continuing to maintain a 1:1 connection between coach and athlete. Our platform simplifies the work of a coach, but never replaces it.
+            Every plan is written by Coach Nic for one athlete: you. The data shows what happened on each run; your coach decides what it means and what comes next.
           </p>
         </div>
         <div class="philosophy-right">
@@ -558,16 +604,11 @@
           </div>
           <div class="philosophy-item reveal" style="--d:100ms">
             <div class="philosophy-num">02</div>
-            <h3>Data-informed, not data-driven</h3>
-            <p>Every plan is thoroughly reviewed and personalized to the athlete. Our software can outline a plan, but only a well-informed coach can perfect a robust schedule.</p>
-          </div>
-          <div class="philosophy-item reveal" style="--d:200ms">
-            <div class="philosophy-num">03</div>
             <h3>Recovery as training</h3>
             <p>Running is just one facet of a successful training block. Recovery, nutrition, and strength training are never neglected at Ndur.</p>
           </div>
-          <div class="philosophy-item reveal" style="--d:300ms">
-            <div class="philosophy-num">04</div>
+          <div class="philosophy-item reveal" style="--d:200ms">
+            <div class="philosophy-num">03</div>
             <h3>Long-term athlete development</h3>
             <p>Whether you are training for your first race or targeting a big PR, we want to build a connection with you! Our program is designed to develop a community of athletes.</p>
           </div>
@@ -576,42 +617,69 @@
     </div>
   </section>
 
+  <!-- EVERY RUN, REVIEWED -->
+  <section class="reviewed" id="strava">
+    <div class="container reviewed-grid">
+      <div>
+        <div class="section-eyebrow reveal">Powered by your Strava data</div>
+        <h2 class="section-title reveal">Every run, reviewed.</h2>
+        <p class="section-sub reveal">Most coaching relies on check-ins written from memory. At Ndur, your coach sees what actually happened on every run.</p>
+        <ul class="reviewed-points reveal">
+          <li>
+            <h3>You just run</h3>
+            <p>Connect Strava once. Every run syncs to Coach Nic automatically, with no logging, screenshots, or forms to fill out.</p>
+          </li>
+          <li>
+            <h3>Reviewed within 24 hours</h3>
+            <p>Pace, heart rate, cadence, and distance, checked against what was planned for that day.</p>
+          </li>
+          <li>
+            <h3>Problems caught early</h3>
+            <p>Runs that drift outside your personal heart-rate or pace zones get flagged, so an easy day run too hard or mileage creeping up doesn't go unnoticed.</p>
+          </li>
+          <li>
+            <h3>Adjustments based on evidence</h3>
+            <p>Your plan changes because of how training is really going, not just how it was supposed to go.</p>
+          </li>
+        </ul>
+        <p class="reviewed-badge reveal">Ndur is a <strong>certified Strava API application</strong>.</p>
+      </div>
+      <div class="reveal" style="--d:150ms">
+        <div class="week-card" role="img" aria-label="Example training week showing planned runs, what the athlete actually ran, and an easy run flagged for being too fast">
+          <div class="week-head"><strong>This week · planned vs. actual</strong><span>Synced from Strava</span></div>
+          <div class="week-row"><span class="week-day">Mon</span><span class="week-plan">5 mi easy<small>5.1 mi · 9:04 /mi · 141 bpm</small></span><span class="week-status ok">On plan</span></div>
+          <div class="week-row"><span class="week-day">Tue</span><span class="week-plan">6 mi · 3 × 1 mi @ tempo<small>6.2 mi · 7:28 /mi reps · 168 bpm</small></span><span class="week-status ok">On plan</span></div>
+          <div class="week-row flagged"><span class="week-day">Thu</span><span class="week-plan">5 mi easy<small>5.0 mi · 8:05 /mi · 163 bpm</small></span><span class="week-status flag">⚑ Above zone 2</span></div>
+          <div class="week-row"><span class="week-day">Sat</span><span class="week-plan">12 mi long run<small>Planned · 9:10–9:30 /mi</small></span><span class="week-status next">Upcoming</span></div>
+          <div class="week-note"><strong>Coach Nic:</strong> Great tempo on Tuesday! Thursday was too fast for an easy day, so keep it conversational to stay fresh for Saturday's long run.</div>
+        </div>
+        <p class="week-caption">Illustrative example</p>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICES -->
   <section class="services" id="services">
     <div class="container">
       <div class="section-eyebrow reveal">Services</div>
-      <h2 class="section-title reveal">Choose your training cycle.</h2>
-      <p class="section-sub">Whether you're building a base or counting down to race day, there's a plan structured around where you are right now.</p>
+      <h2 class="section-title reveal">One plan. Everything included.</h2>
+      <p class="section-sub">Whether you're building a base or counting down to race day, your plan is structured around where you are right now.</p>
       <div class="services-grid reveal">
-        <div class="service-card">
-          <div class="service-icon">🎯</div>
+        <div class="service-card single">
           <h3>Summit Training</h3>
           <ul class="service-list">
-            <li>Training plan adjusted weekly based on performance and preferences.</li>
+            <li>Personalized training plan, adjusted weekly based on performance and preferences.</li>
+            <li>Every run synced from Strava and reviewed within 24 hours, with alerts when runs drift outside your zones.</li>
             <li>Weekly check-in via text message or email.</li>
-            <li>Monthly call to reflect on the month's training and prepare for the upcoming month.</li>
+            <li>Monthly call to reflect on the month's training and prepare for the next.</li>
             <li>Unlimited access to ask Coach Nic questions or address concerns.</li>
             <li>Pacing, fueling, and recovery recommendations.</li>
             <li>Running-focused strength training plan upon request.</li>
           </ul>
-          <div class="service-price"><span class="service-tag">$100/Month</span><span class="service-badge">Recommended</span></div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🏃</div>
-          <h3>Base Training</h3>
-          <ul class="service-list">
-            <li>Training plan adjusted monthly based on performance and preferences.</li>
-            <li>Weekly check-in via text message or email.</li>
-            <li>Unlimited access to ask Coach Nic questions or address concerns.</li>
-            <li>Pacing, fueling, and recovery recommendations.</li>
-          </ul>
-          <div class="service-price"><span class="service-tag">$60/Month</span></div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🔄</div>
-          <h3>Student Discount</h3>
-          <p>Summit or Base plan billed at 25% off for all college students!</p>
-          <div class="service-price"><span class="service-tag">25% Off</span></div>
+          <div class="service-price">
+            <div class="service-amount">$100<span>/ month</span></div>
+            <a href="https://cal.com/ndur.life/30min" target="_blank" rel="noopener" class="btn-primary">Book a free consult</a>
+          </div>
         </div>
       </div>
     </div>
@@ -622,7 +690,7 @@
     <div class="container">
       <div class="section-eyebrow reveal">Why Ndur</div>
       <h2 class="section-title reveal">How we compare.</h2>
-      <p class="section-sub">Let's be honest. Almost everyone would love to have a 1:1 coach that is committed to helping them achieve their goals. Unfortunately, most coaching services are wildly expensive, limiting the number of athletes who can afford these services. As a result, many athletes rely on AI generated plans that lead to injuries. At Ndur, we've built the best of both worlds. Our coaching platform, built by Coach Nic, removes the guesswork and redundancy of coaching, allowing us to deliver 1:1 coaching at a much more affordable price.</p>
+      <p class="section-sub">Let's be honest: most 1:1 coaching is wildly expensive, so many athletes settle for generic or AI-generated plans that can't see how training is actually going. Ndur gives you a real coach who sees every run, at a price within reach. That's made possible by a coaching platform Coach Nic built himself, and by a passion for the sport over profit.</p>
 
       <div class="compare-table-wrap reveal">
         <table class="compare-table">
@@ -648,7 +716,7 @@
               <td class="compare-highlight compare-yes">✓</td>
             </tr>
             <tr>
-              <td class="compare-feature-col">Coach reviews your synced training data</td>
+              <td class="compare-feature-col">Every run reviewed by your coach, with no manual logging</td>
               <td class="compare-no">✕</td>
               <td class="compare-no">✓</td>
               <td class="compare-highlight compare-yes">✓</td>
@@ -698,12 +766,12 @@
         <div class="process-step reveal" style="--d:120ms">
           <div class="process-step-num">2</div>
           <h3>Intake &amp; your plan</h3>
-          <p>Complete the intake form, create your client portal account, and connect Strava. Your plan arrives in the portal with daily distance, pace targets, coach notes, and a pace guide, plus an optional running-focused strength plan. Add the portal to your phone's home screen and it works like an app.</p>
+          <p>Complete the intake form, create your client portal account, and connect Strava. Coach Nic writes your plan, and it arrives in the portal with daily distance, pace targets, and coach notes.</p>
         </div>
         <div class="process-step reveal" style="--d:240ms">
           <div class="process-step-num">3</div>
           <h3>Start training</h3>
-          <p>We can't log the miles for you, but we'll be watching every one. As a certified Strava API application, Ndur syncs your runs automatically, and Coach Nic reviews planned vs. actual mileage, pace, and heart rate, so your plan adapts to how training is really going. Our primary focus is getting you to race day healthy.</p>
+          <p>We can't log the miles for you, but we'll see every one. Your runs sync from Strava and are reviewed within 24 hours, so your plan adapts as you go. Our primary focus is getting you to race day healthy.</p>
         </div>
         <div class="process-step reveal" style="--d:360ms">
           <div class="process-step-num">4</div>
@@ -802,11 +870,11 @@
         </details>
         <details class="faq-item">
           <summary>How does my coach see my training?</summary>
-          <p>Once you connect Strava in the client portal, your runs sync automatically. Coach Nic sees your mileage, pace, and heart rate against what was planned, so your plan can be adjusted based on how training is actually going. In the portal, you'll see your plan and your weekly totals.</p>
+          <p>Once you connect Strava in the client portal, your runs sync automatically and Coach Nic reviews them within 24 hours: mileage, pace, and heart rate against what was planned, with alerts when a run drifts outside your zones. In the portal, you'll see your plan and your weekly totals.</p>
         </details>
         <details class="faq-item">
           <summary>How does billing work?</summary>
-          <p>Coaching is billed monthly through Stripe, with payment due on the 1st of each month. College students get 25% off either plan.</p>
+          <p>Coaching is $100 per month, billed through Stripe, with payment due on the 1st of each month.</p>
         </details>
         <details class="faq-item">
           <summary>Can I cancel?</summary>
