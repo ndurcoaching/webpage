@@ -291,6 +291,25 @@
     .service-card.single .service-list { columns: 2; column-gap: 40px; }
     .service-card.single .service-list li { break-inside: avoid; }
     .service-card.single .service-price { justify-content: space-between; gap: 20px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); }
+    .summit-head {
+      display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+      margin-bottom: 24px;
+    }
+    .summit-head h3 { font-size: 22px; margin-bottom: 4px; }
+    .summit-sub { font-size: 14px; color: rgba(255,255,255,0.45); }
+    .summit-climb { width: 220px; height: 110px; flex: none; overflow: visible; }
+    .summit-climb .mtn-back { fill: rgba(91,164,245,0.08); }
+    .summit-climb .mtn { fill: rgba(91,164,245,0.14); stroke: rgba(91,164,245,0.35); stroke-width: 1; stroke-linejoin: round; }
+    .summit-climb .mtn-snow { fill: rgba(255,255,255,0.3); }
+    .summit-climb .trail-ghost { fill: none; stroke: rgba(255,255,255,0.18); stroke-width: 1.5; stroke-dasharray: 2 5; stroke-linecap: round; }
+    .summit-climb .trail { fill: none; stroke: #5ba4f5; stroke-width: 2.5; stroke-linecap: round; }
+    .summit-climb .climber-halo { fill: #5ba4f5; transform-box: fill-box; transform-origin: center; animation: route-halo 1.4s ease-out infinite; }
+    .summit-climb .flag-pole { stroke: rgba(255,255,255,0.7); stroke-width: 1.5; }
+    .summit-climb .flag { fill: #5ba4f5; transform-box: fill-box; transform-origin: left center; transform: scaleX(0); transition: transform 0.5s cubic-bezier(.2,.7,.2,1); }
+    .summit-climb .flag-group { opacity: 0; transition: opacity 0.3s ease; }
+    .summit-climb.done .flag-group { opacity: 1; }
+    .summit-climb.done .flag { transform: scaleX(1); animation: flag-wave 2.4s ease-in-out 0.6s infinite; }
+    @keyframes flag-wave { 0%, 100% { transform: scaleX(1) skewY(0); } 50% { transform: scaleX(0.88) skewY(-6deg); } }
     .service-amount { font-family: var(--font-display); font-size: 40px; color: #fff; line-height: 1; }
     .service-amount span { font-family: var(--font-body); font-size: 15px; color: rgba(255,255,255,0.5); margin-left: 4px; }
     .service-price { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
@@ -515,6 +534,8 @@
       .week-row { padding: 13px 16px; grid-template-columns: 36px 1fr auto; }
       .service-card.single { padding: 28px 24px; }
       .service-card.single .service-list { columns: 1; }
+      .summit-head { flex-direction: column-reverse; align-items: flex-start; gap: 16px; }
+      .summit-climb { width: 160px; height: 80px; }
       .process-steps { grid-template-columns: 1fr 1fr; }
       .process-step::after { display: none; }
       .about-inner { grid-template-columns: 1fr; }
@@ -554,7 +575,7 @@
         <div class="hero-eyebrow rise" style="--d:100ms">Running Coaching</div>
         <h1 class="rise" style="--d:250ms">Train with <em>purpose.</em><br>Race with confidence.</h1>
         <p class="hero-sub rise" style="--d:400ms">
-          1:1 coaching from a coach who sees every run. Connect Strava, and Coach Nic reviews your training within 24 hours.
+          Don't do it alone. Train smarter and race faster with Ndur Coaching.
         </p>
         <div class="hero-btns rise" style="--d:550ms">
           <a href="https://cal.com/ndur.life/30min" target="_blank" rel="noopener" class="btn-primary">Book a free consult</a>
@@ -666,7 +687,24 @@
       <p class="section-sub">Whether you're building a base or counting down to race day, your plan is structured around where you are right now.</p>
       <div class="services-grid reveal">
         <div class="service-card single">
-          <h3>Summit Training</h3>
+          <div class="summit-head">
+            <div>
+              <h3>Summit Training</h3>
+              <span class="summit-sub">Full 1:1 coaching, from base camp to summit.</span>
+            </div>
+            <svg class="summit-climb" viewBox="0 0 220 110" aria-hidden="true">
+              <polygon class="mtn-back" points="130,110 176,46 220,110"/>
+              <polygon class="mtn" points="0,110 60,62 82,74 120,18 150,52 168,44 214,110"/>
+              <polygon class="mtn-snow" points="109,34 120,18 131,34 125,31 120,36 114,31"/>
+              <path class="trail-ghost" d="M16 106 C 44 102, 70 98, 62 90 S 82 80, 96 73 S 92 60, 104 51 S 116 36, 120 20"/>
+              <path class="trail" d="M16 106 C 44 102, 70 98, 62 90 S 82 80, 96 73 S 92 60, 104 51 S 116 36, 120 20"/>
+              <g class="flag-group">
+                <line class="flag-pole" x1="120" y1="19" x2="120" y2="0"/>
+                <polygon class="flag" points="120,0 136,4.5 120,9"/>
+              </g>
+              <g class="climber" transform="translate(16,106)"><circle class="climber-halo" r="7"/><circle r="5" fill="#fff"/><circle r="2.5" fill="#0a5fd4"/></g>
+            </svg>
+          </div>
           <ul class="service-list">
             <li>Personalized training plan, adjusted weekly based on performance and preferences.</li>
             <li>Every run synced from Strava and reviewed within 24 hours, with alerts when runs drift outside your zones.</li>
@@ -939,6 +977,37 @@
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
     }), { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    /* summit climb: trail draws and the climber reaches the peak when the card scrolls into view */
+    const climb = document.querySelector('.summit-climb');
+    if (climb) {
+      const trail = climb.querySelector('.trail'), climber = climb.querySelector('.climber');
+      const TL = trail.getTotalLength();
+      trail.style.strokeDasharray = TL;
+      const at = e => {
+        trail.style.strokeDashoffset = TL * (1 - e);
+        const pt = trail.getPointAtLength(Math.max(TL * e, 0.01));
+        climber.setAttribute('transform', `translate(${pt.x},${pt.y})`);
+      };
+      const ease = t => t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+      if (reduce) { at(1); climb.classList.add('done'); }
+      else {
+        at(0);
+        const cio = new IntersectionObserver(entries => {
+          if (!entries[0].isIntersecting) return;
+          cio.disconnect();
+          let t0;
+          const step = ts => {
+            t0 = t0 || ts;
+            const k = Math.min(1, (ts - t0 - 300) / 2600);
+            at(ease(Math.max(0, k)));
+            if (k < 1) requestAnimationFrame(step); else climb.classList.add('done');
+          };
+          requestAnimationFrame(step);
+        }, { threshold: 0.6 });
+        cio.observe(climb);
+      }
+    }
 
     /* hero route: line draws, runner travels, mile counter climbs to 26.2 */
     const MILES = 26.2;
