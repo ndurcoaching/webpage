@@ -297,17 +297,13 @@
     }
     .summit-head h3 { font-size: 22px; margin-bottom: 4px; }
     .summit-sub { font-size: 14px; color: rgba(255,255,255,0.45); }
-    .summit-climb { width: 240px; height: 100px; flex: none; overflow: visible; margin-top: 20px; }
+    .summit-climb { width: 240px; height: 100px; flex: none; overflow: visible; }
     .summit-climb .grid line { stroke: rgba(255,255,255,0.06); stroke-width: 1; }
-    .summit-climb .grid text { font-family: var(--font-body); font-size: 9px; letter-spacing: 1px; fill: rgba(255,255,255,0.3); }
     .summit-climb .profile-ghost { fill: none; stroke: rgba(255,255,255,0.07); stroke-width: 1.5; stroke-dasharray: 2 6; stroke-linecap: round; }
     .summit-climb .profile-line { fill: none; stroke: #5ba4f5; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
     .summit-climb .profile-glow { fill: none; stroke: #5ba4f5; stroke-width: 8; stroke-linecap: round; opacity: 0.2; filter: blur(5px); }
     .summit-climb .profile-area { opacity: 0; transition: opacity 1.2s ease; }
-    .summit-climb .summit-mark { opacity: 0; transform: translateY(4px); transition: opacity 0.4s ease, transform 0.4s cubic-bezier(.2,.7,.2,1); }
-    .summit-climb .summit-mark line { stroke: rgba(255,255,255,0.18); stroke-width: 1; stroke-dasharray: 2 3; }
-    .summit-climb .summit-mark text { font-family: var(--font-body); font-size: 10px; font-weight: 600; letter-spacing: 1px; fill: #fff; }
-    .summit-climb.done .profile-area, .summit-climb.done .summit-mark { opacity: 1; transform: none; }
+    .summit-climb.done .profile-area { opacity: 1; }
     .service-amount { font-family: var(--font-display); font-size: 40px; color: #fff; line-height: 1; }
     .service-amount span { font-family: var(--font-body); font-size: 15px; color: rgba(255,255,255,0.5); margin-left: 4px; }
     .service-price { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
@@ -699,13 +695,11 @@
               </defs>
               <g class="grid">
                 <line x1="0" y1="96" x2="240" y2="96"/><line x1="0" y1="66" x2="240" y2="66"/><line x1="0" y1="36" x2="240" y2="36"/>
-                <text x="0" y="62">ELEV</text>
               </g>
               <path class="profile-area" d="M4 92 L22 88 L34 90 L50 80 L62 83 L80 70 L92 73 L110 58 L122 62 L140 46 L152 49 L170 32 L182 36 L200 20 L212 24 L224 12 L224 96 L4 96 Z" fill="url(#profileArea)"/>
               <path class="profile-ghost" d="M4 92 L22 88 L34 90 L50 80 L62 83 L80 70 L92 73 L110 58 L122 62 L140 46 L152 49 L170 32 L182 36 L200 20 L212 24 L224 12"/>
               <path class="profile-glow" d="M4 92 L22 88 L34 90 L50 80 L62 83 L80 70 L92 73 L110 58 L122 62 L140 46 L152 49 L170 32 L182 36 L200 20 L212 24 L224 12"/>
               <path class="profile-line" d="M4 92 L22 88 L34 90 L50 80 L62 83 L80 70 L92 73 L110 58 L122 62 L140 46 L152 49 L170 32 L182 36 L200 20 L212 24 L224 12"/>
-              <g class="summit-mark"><line x1="224" y1="4" x2="224" y2="-14"/><text x="224" y="-18" text-anchor="end">SUMMIT</text></g>
               <g class="climber" transform="translate(4,92)"><circle r="5" fill="#fff"/><circle r="2.5" fill="#0a5fd4"/></g>
             </svg>
           </div>
